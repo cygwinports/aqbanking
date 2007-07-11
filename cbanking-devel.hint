@@ -1,0 +1,10 @@
+category: Net
+requires: cygwin libaqbanking-devel libgwenhywfar-devel libiconv gettext
+external-source: aqbanking
+sdesc: "Online banking and financial library (CLI frontend development)"
+ldesc: "AqBanking is a library for online banking and financial 
+applications. It provides:
+* Interface for HBCI, OFX, and DTAUS banking methods
+* Financial data importer and exporter
+* Credit institution information retrieval
+* Frontend libraries for FOX, GTK+, Qt, and KDE"

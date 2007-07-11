@@ -1,0 +1,493 @@
+aqbanking
+------------------------------------------
+AqBanking is a library for online banking and financial applications.  
+It provides:
+* Interface for HBCI, OFX, and DTAUS banking methods
+* Financial data importer and exporter
+* Credit institution information retrieval
+* Frontend libraries for FOX, GTK+, Qt, and KDE
+
+Runtime requirements:
+  cygwin-1.5.24-2
+  libgwenhywfar38-2.6.1-1
+  libiconv2-1.11-1
+  libintl8-0.15-1
+  libktoblzcheck1-1.14-1
+(libaqofxconnect)
+  libofx3-0.8.3-1
+(libfbanking)
+  fox16-1.6.28-1
+(libg2banking)
+  glib2-2.12.12-2
+  gtk2-x11-2.10.13-1
+  libglade2-2.6.1-1
+(libkbanking)
+  kdelibs4-3.5.7-1
+(libqbanking)
+  qt3-3.3.8-1
+
+Build requirements:
+(besides corresponding -devel packages)
+  cygwin-1.5.24-2
+  autoconf2.5-2.61-1
+  automake1.9-1.9.6-2
+  binutils-20060817-1
+  bison-2.3-1
+  cygport-0.2.11-1
+  flex-2.5.33-1
+  gawk-3.1.5-4
+  gcc-core-3.4.4-3
+  libtool1.5-1.5.23a-2
+  make-3.81-1
+  sed-4.1.5-2
+
+Canonical website:
+  
+
+Canonical download:
+  
+
+-------------------------------------------
+
+Build instructions:
+  unpack aqbanking-2.3.2-X-src.tar.bz2
+    if you use setup to install this src package, it will be
+	 unpacked under /usr/src automatically
+  cd /usr/src
+  cygport ./aqbanking-2.3.2-X.cygport all
+
+This will create:
+  /usr/src/aqbanking-2.3.2-X-src.tar.bz2
+  /usr/src/aqbanking-2.3.2-X.tar.bz2
+
+-------------------------------------------
+
+Files included in the binary package:
+
+  /usr/bin/aqbanking-tool.exe
+  /usr/bin/aqhbci-tool.exe
+  /usr/bin/hbcixml2.exe
+  /usr/bin/qb-help.exe
+  /usr/share/doc/Cygwin/aqbanking-2.3.2.README
+  /usr/share/doc/aqbanking-2.3.2/AUTHORS
+  /usr/share/doc/aqbanking-2.3.2/COPYING
+  /usr/share/doc/aqbanking-2.3.2/ChangeLog
+  /usr/share/doc/aqbanking-2.3.2/INSTALL
+  /usr/share/doc/aqbanking-2.3.2/NEWS
+  /usr/share/doc/aqbanking-2.3.2/README
+  /usr/share/doc/aqbanking-2.3.2/TODO
+  /usr/share/doc/aqbanking-2.3.2/aqbanking-tool/README
+  /usr/share/doc/aqbanking-2.3.2/aqbanking-tool/SICHERHEITSHINWEISE
+  /usr/share/doc/aqbanking-2.3.2/aqhbci-tool/README
+  /usr/share/locale/de/LC_MESSAGES/aqbanking.mo
+
+(libaqbanking16)
+  /usr/bin/cygaqbanking-16.dll
+  /usr/lib/aqbanking/plugins/16/bankinfo/at.dll
+  /usr/lib/aqbanking/plugins/16/bankinfo/at.la
+  /usr/lib/aqbanking/plugins/16/bankinfo/at.xml
+  /usr/lib/aqbanking/plugins/16/bankinfo/ch.dll
+  /usr/lib/aqbanking/plugins/16/bankinfo/ch.la
+  /usr/lib/aqbanking/plugins/16/bankinfo/ch.xml
+  /usr/lib/aqbanking/plugins/16/bankinfo/de.dll
+  /usr/lib/aqbanking/plugins/16/bankinfo/de.la
+  /usr/lib/aqbanking/plugins/16/bankinfo/de.xml
+  /usr/lib/aqbanking/plugins/16/bankinfo/us.dll
+  /usr/lib/aqbanking/plugins/16/bankinfo/us.la
+  /usr/lib/aqbanking/plugins/16/bankinfo/us.xml
+  /usr/lib/aqbanking/plugins/16/imexporters/csv.dll
+  /usr/lib/aqbanking/plugins/16/imexporters/csv.la
+  /usr/lib/aqbanking/plugins/16/imexporters/csv.xml
+  /usr/lib/aqbanking/plugins/16/imexporters/dbio.xml
+  /usr/lib/aqbanking/plugins/16/imexporters/dtaus.dll
+  /usr/lib/aqbanking/plugins/16/imexporters/dtaus.la
+  /usr/lib/aqbanking/plugins/16/imexporters/dtaus.xml
+  /usr/lib/aqbanking/plugins/16/imexporters/eri.dll
+  /usr/lib/aqbanking/plugins/16/imexporters/eri.la
+  /usr/lib/aqbanking/plugins/16/imexporters/eri.xml
+  /usr/lib/aqbanking/plugins/16/imexporters/eri2.dll
+  /usr/lib/aqbanking/plugins/16/imexporters/eri2.la
+  /usr/lib/aqbanking/plugins/16/imexporters/eri2.xml
+  /usr/lib/aqbanking/plugins/16/imexporters/ofx.dll
+  /usr/lib/aqbanking/plugins/16/imexporters/ofx.la
+  /usr/lib/aqbanking/plugins/16/imexporters/ofx.xml
+  /usr/lib/aqbanking/plugins/16/imexporters/openhbci1.dll
+  /usr/lib/aqbanking/plugins/16/imexporters/openhbci1.la
+  /usr/lib/aqbanking/plugins/16/imexporters/openhbci1.xml
+  /usr/lib/aqbanking/plugins/16/imexporters/qif.dll
+  /usr/lib/aqbanking/plugins/16/imexporters/qif.la
+  /usr/lib/aqbanking/plugins/16/imexporters/qif.xml
+  /usr/lib/aqbanking/plugins/16/imexporters/swift.dll
+  /usr/lib/aqbanking/plugins/16/imexporters/swift.la
+  /usr/lib/aqbanking/plugins/16/imexporters/swift.xml
+  /usr/lib/aqbanking/plugins/16/imexporters/xmldb.dll
+  /usr/lib/aqbanking/plugins/16/imexporters/xmldb.la
+  /usr/lib/aqbanking/plugins/16/imexporters/xmldb.xml
+  /usr/lib/aqbanking/plugins/16/imexporters/yellownet.dll
+  /usr/lib/aqbanking/plugins/16/imexporters/yellownet.la
+  /usr/lib/aqbanking/plugins/16/imexporters/yellownet.xml
+  /usr/lib/gwenhywfar/plugins/38/crypttoken/pintan.dll
+  /usr/lib/gwenhywfar/plugins/38/crypttoken/pintan.la
+  /usr/lib/gwenhywfar/plugins/38/crypttoken/pintan.xml
+  /usr/lib/gwenhywfar/plugins/38/dbio/dtaus.dll
+  /usr/lib/gwenhywfar/plugins/38/dbio/dtaus.la
+  /usr/lib/gwenhywfar/plugins/38/dbio/dtaus.xml
+  /usr/lib/gwenhywfar/plugins/38/dbio/swift.dll
+  /usr/lib/gwenhywfar/plugins/38/dbio/swift.la
+  /usr/lib/gwenhywfar/plugins/38/dbio/swift.xml
+  /usr/share/aqbanking/bankinfo/at/banks.data
+  /usr/share/aqbanking/bankinfo/at/bic.idx
+  /usr/share/aqbanking/bankinfo/at/blz.idx
+  /usr/share/aqbanking/bankinfo/at/namloc.idx
+  /usr/share/aqbanking/bankinfo/ch/banks.data
+  /usr/share/aqbanking/bankinfo/ch/bic.idx
+  /usr/share/aqbanking/bankinfo/ch/blz.idx
+  /usr/share/aqbanking/bankinfo/ch/namloc.idx
+  /usr/share/aqbanking/bankinfo/de/banks.data
+  /usr/share/aqbanking/bankinfo/de/bic.idx
+  /usr/share/aqbanking/bankinfo/de/blz.idx
+  /usr/share/aqbanking/bankinfo/de/namloc.idx
+  /usr/share/aqbanking/bankinfo/us/banks.data
+  /usr/share/aqbanking/bankinfo/us/bic.idx
+  /usr/share/aqbanking/bankinfo/us/blz.idx
+  /usr/share/aqbanking/bankinfo/us/namloc.idx
+  /usr/share/aqbanking/imexporters/csv/profiles/amex.conf
+  /usr/share/aqbanking/imexporters/csv/profiles/aqmoney1.conf
+  /usr/share/aqbanking/imexporters/csv/profiles/aqmoney2.conf
+  /usr/share/aqbanking/imexporters/csv/profiles/comdirect.conf
+  /usr/share/aqbanking/imexporters/csv/profiles/default.conf
+  /usr/share/aqbanking/imexporters/csv/profiles/mijnpostbank.conf
+  /usr/share/aqbanking/imexporters/csv/profiles/oko.conf
+  /usr/share/aqbanking/imexporters/csv/profiles/spk-aachen.conf
+  /usr/share/aqbanking/imexporters/csv/profiles/tonline-banking.conf
+  /usr/share/aqbanking/imexporters/dtaus/profiles/default.conf
+  /usr/share/aqbanking/imexporters/eri/profiles/default.conf
+  /usr/share/aqbanking/imexporters/eri2/eriformat.xml
+  /usr/share/aqbanking/imexporters/eri2/profiles/default.conf
+  /usr/share/aqbanking/imexporters/ofx/profiles/default.conf
+  /usr/share/aqbanking/imexporters/openhbci1/profiles/default.conf
+  /usr/share/aqbanking/imexporters/qif/profiles/default.conf
+  /usr/share/aqbanking/imexporters/swift/profiles/amro940.conf
+  /usr/share/aqbanking/imexporters/swift/profiles/amro942.conf
+  /usr/share/aqbanking/imexporters/swift/profiles/swiftmt940.conf
+  /usr/share/aqbanking/imexporters/swift/profiles/swiftmt942.conf
+  /usr/share/aqbanking/imexporters/xmldb/profiles/default.conf
+  /usr/share/aqbanking/imexporters/yellownet/profiles/default.conf
+
+(libaqdtaus3)
+  /usr/bin/cygaqdtaus-3.dll
+  /usr/lib/aqbanking/plugins/16/providers/aqdtaus.dll
+  /usr/lib/aqbanking/plugins/16/providers/aqdtaus.la
+  /usr/lib/aqbanking/plugins/16/providers/aqdtaus.xml
+
+(libaqhbci10)
+  /usr/bin/cygaqhbci-10.dll
+  /usr/lib/aqbanking/plugins/16/providers/aqhbci.dll
+  /usr/lib/aqbanking/plugins/16/providers/aqhbci.la
+  /usr/lib/aqbanking/plugins/16/providers/aqhbci.xml
+  /usr/share/aqhbci/xml/hbci.xml
+
+(libaqnone0)
+  /usr/bin/cygaqnone-0.dll
+  /usr/lib/aqbanking/plugins/16/providers/aqnone.dll
+  /usr/lib/aqbanking/plugins/16/providers/aqnone.la
+  /usr/lib/aqbanking/plugins/16/providers/aqnone.xml
+  /usr/lib/libaqnone.dll.a
+  /usr/lib/libaqnone.la
+
+(libaqofconnect3)
+  /usr/bin/cygaqofxconnect-3.dll
+  /usr/lib/aqbanking/plugins/16/providers/aqofxconnect.dll
+  /usr/lib/aqbanking/plugins/16/providers/aqofxconnect.la
+  /usr/lib/aqbanking/plugins/16/providers/aqofxconnect.xml
+
+(libcbanking16)
+  /usr/bin/cygcbanking-16.dll
+
+(libfbanking1)
+  /usr/bin/cygfbanking-1.dll
+
+(libg2banking2)
+  /usr/bin/cygg2banking-2.dll
+  /usr/share/aqbanking/frontends/g2banking/glade2/g2banking.glade
+
+(libkbanking1)
+  /usr/bin/cygkbanking-1.dll
+
+(libqbanking4)
+  /usr/bin/cygqbanking-4.dll
+  /usr/lib/aqbanking/plugins/16/debugger/aqhbci/aqhbci-qt3-debug.exe
+  /usr/lib/aqbanking/plugins/16/debugger/aqhbci/qt_debug.xml
+  /usr/lib/aqbanking/plugins/16/frontends/qbanking/cfgmodules/aqdtaus.dll
+  /usr/lib/aqbanking/plugins/16/frontends/qbanking/cfgmodules/aqdtaus.la
+  /usr/lib/aqbanking/plugins/16/frontends/qbanking/cfgmodules/aqhbci.dll
+  /usr/lib/aqbanking/plugins/16/frontends/qbanking/cfgmodules/aqhbci.la
+  /usr/lib/aqbanking/plugins/16/frontends/qbanking/cfgmodules/aqofxconnect.dll
+  /usr/lib/aqbanking/plugins/16/frontends/qbanking/cfgmodules/aqofxconnect.la
+  /usr/lib/aqbanking/plugins/16/wizards/qt3-wizard.exe
+  /usr/lib/aqbanking/plugins/16/wizards/qt3_wizard.xml
+  /usr/share/aqbanking/frontends/qbanking/help/de/images/qbcfgtabsettings-1.png
+  /usr/share/aqbanking/frontends/qbanking/help/de/images/qbcfgtabsettings-2.png
+  /usr/share/aqbanking/frontends/qbanking/help/de/images/qbcfgtabsettings-3.png
+  /usr/share/aqbanking/frontends/qbanking/help/de/images/qbeditaccount-1.png
+  /usr/share/aqbanking/frontends/qbanking/help/de/images/qbeditaccount-2.png
+  /usr/share/aqbanking/frontends/qbanking/help/de/images/qbedituser-1.png
+  /usr/share/aqbanking/frontends/qbanking/help/de/images/qbedituser-2.png
+  /usr/share/aqbanking/frontends/qbanking/help/de/qbcfgtabsettings.html
+  /usr/share/aqbanking/frontends/qbanking/help/de/qbeditaccount.html
+  /usr/share/aqbanking/frontends/qbanking/help/de/qbedituser.html
+  /usr/share/aqbanking/i18n/de.qm
+
+(libaqbanking-devel)
+  /usr/bin/aqbanking-config
+  /usr/include/aqbanking/account.h
+  /usr/include/aqbanking/account_be.h
+  /usr/include/aqbanking/accstatus.h
+  /usr/include/aqbanking/balance.h
+  /usr/include/aqbanking/bankinfo.h
+  /usr/include/aqbanking/bankinfoplugin.h
+  /usr/include/aqbanking/bankinfoplugin_be.h
+  /usr/include/aqbanking/bankinfoservice.h
+  /usr/include/aqbanking/banking.h
+  /usr/include/aqbanking/banking_be.h
+  /usr/include/aqbanking/banking_imex.h
+  /usr/include/aqbanking/banking_info.h
+  /usr/include/aqbanking/banking_ob.h
+  /usr/include/aqbanking/banking_simple.h
+  /usr/include/aqbanking/banking_virt.h
+  /usr/include/aqbanking/country.h
+  /usr/include/aqbanking/error.h
+  /usr/include/aqbanking/eutransferinfo.h
+  /usr/include/aqbanking/httpsession.h
+  /usr/include/aqbanking/imexporter.h
+  /usr/include/aqbanking/imexporter_be.h
+  /usr/include/aqbanking/job.h
+  /usr/include/aqbanking/job_be.h
+  /usr/include/aqbanking/jobcreatedatedtransfer.h
+  /usr/include/aqbanking/jobcreatedatedtransfer_be.h
+  /usr/include/aqbanking/jobcreatedatedtransfer_l.h
+  /usr/include/aqbanking/jobcreatesto.h
+  /usr/include/aqbanking/jobcreatesto_be.h
+  /usr/include/aqbanking/jobcreatesto_l.h
+  /usr/include/aqbanking/jobdeletedatedtransfer.h
+  /usr/include/aqbanking/jobdeletedatedtransfer_be.h
+  /usr/include/aqbanking/jobdeletedatedtransfer_l.h
+  /usr/include/aqbanking/jobdeletesto.h
+  /usr/include/aqbanking/jobdeletesto_be.h
+  /usr/include/aqbanking/jobdeletesto_l.h
+  /usr/include/aqbanking/jobeutransfer.h
+  /usr/include/aqbanking/jobeutransfer_be.h
+  /usr/include/aqbanking/jobeutransfer_l.h
+  /usr/include/aqbanking/jobgetbalance.h
+  /usr/include/aqbanking/jobgetbalance_be.h
+  /usr/include/aqbanking/jobgetbalance_l.h
+  /usr/include/aqbanking/jobgetdatedtransfers.h
+  /usr/include/aqbanking/jobgetdatedtransfers_be.h
+  /usr/include/aqbanking/jobgetdatedtransfers_l.h
+  /usr/include/aqbanking/jobgetstandingorders.h
+  /usr/include/aqbanking/jobgetstandingorders_be.h
+  /usr/include/aqbanking/jobgetstandingorders_l.h
+  /usr/include/aqbanking/jobgettransactions.h
+  /usr/include/aqbanking/jobgettransactions_be.h
+  /usr/include/aqbanking/jobgettransactions_l.h
+  /usr/include/aqbanking/jobinternaltransfer.h
+  /usr/include/aqbanking/jobinternaltransfer_be.h
+  /usr/include/aqbanking/jobinternaltransfer_l.h
+  /usr/include/aqbanking/jobmodifydatedtransfer.h
+  /usr/include/aqbanking/jobmodifydatedtransfer_be.h
+  /usr/include/aqbanking/jobmodifydatedtransfer_l.h
+  /usr/include/aqbanking/jobmodifysto.h
+  /usr/include/aqbanking/jobmodifysto_be.h
+  /usr/include/aqbanking/jobmodifysto_l.h
+  /usr/include/aqbanking/jobsingledebitnote.h
+  /usr/include/aqbanking/jobsingledebitnote_be.h
+  /usr/include/aqbanking/jobsingledebitnote_l.h
+  /usr/include/aqbanking/jobsingletransfer.h
+  /usr/include/aqbanking/jobsingletransfer_be.h
+  /usr/include/aqbanking/jobsingletransfer_l.h
+  /usr/include/aqbanking/jobtransferbase_l.h
+  /usr/include/aqbanking/msgengine.h
+  /usr/include/aqbanking/provider.h
+  /usr/include/aqbanking/provider_be.h
+  /usr/include/aqbanking/split.h
+  /usr/include/aqbanking/system.h
+  /usr/include/aqbanking/textkeydescr.h
+  /usr/include/aqbanking/transaction.h
+  /usr/include/aqbanking/transactionfns.h
+  /usr/include/aqbanking/transactionlimits.h
+  /usr/include/aqbanking/user.h
+  /usr/include/aqbanking/userfns.h
+  /usr/include/aqbanking/value.h
+  /usr/include/aqbanking/version.h
+  /usr/lib/libaqbanking.dll.a
+  /usr/lib/libaqbanking.la
+  /usr/lib/pkgconfig/aqbanking.pc
+  /usr/share/aclocal/aqbanking.m4
+
+(libaqdtaus-devel)
+  /usr/bin/aqdtaus-config
+  /usr/include/aqdtaus/account.h
+  /usr/include/aqdtaus/aqdtaus.h
+  /usr/include/aqdtaus/job.h
+  /usr/include/aqdtaus/provider.h
+  /usr/include/aqdtaus/version.h
+  /usr/lib/libaqdtaus.dll.a
+  /usr/lib/libaqdtaus.la
+  /usr/share/aclocal/aqdtaus.m4
+
+(libaqhbci-devel)
+  /usr/bin/aqhbci-config
+  /usr/include/aqhbci/account.h
+  /usr/include/aqhbci/aqhbci.h
+  /usr/include/aqhbci/medium.h
+  /usr/include/aqhbci/mediumctx.h
+  /usr/include/aqhbci/msgengine.h
+  /usr/include/aqhbci/provider.h
+  /usr/include/aqhbci/user.h
+  /usr/lib/libaqhbci.dll.a
+  /usr/lib/libaqhbci.la
+  /usr/share/aclocal/aqhbci.m4
+
+(libaqofxconnect-devel)
+  /usr/bin/aqofxconnect-config
+  /usr/include/aqofxconnect/account.h
+  /usr/include/aqofxconnect/aqofxconnect.h
+  /usr/include/aqofxconnect/provider.h
+  /usr/include/aqofxconnect/user.h
+  /usr/include/aqofxconnect/version.h
+  /usr/lib/libaqofxconnect.dll.a
+  /usr/lib/libaqofxconnect.la
+  /usr/share/aclocal/aqofxconnect.m4
+
+(libcbanking-devel)
+  /usr/bin/cbanking-config
+  /usr/include/cbanking/cbanking.h
+  /usr/lib/libcbanking.dll.a
+  /usr/lib/libcbanking.la
+  /usr/share/aclocal/cbanking.m4
+
+(libfbanking-devel)
+  /usr/include/fbanking/banking.h
+  /usr/include/fbanking/fbanking.h
+  /usr/lib/libfbanking.dll.a
+  /usr/lib/libfbanking.la
+  /usr/lib/pkgconfig/fbanking.pc
+
+(libg2banking-devel)
+  /usr/bin/g2banking-config
+  /usr/include/g2banking/gbanking.h
+  /usr/include/g2banking/gbjoblist.h
+  /usr/include/g2banking/gbjobview.h
+  /usr/include/g2banking/gbprofilelist.h
+  /usr/include/g2banking/gbprofileview.h
+  /usr/lib/libg2banking.dll.a
+  /usr/lib/libg2banking.la
+  /usr/share/aclocal/g2banking.m4
+
+(libkbanking-devel)
+  /usr/bin/kbanking-config
+  /usr/include/kbanking/jobview.h
+  /usr/include/kbanking/kbaccountlist.h
+  /usr/include/kbanking/kbanking.h
+  /usr/include/kbanking/kbanking_p.h
+  /usr/include/kbanking/kbflagstaff.h
+  /usr/include/kbanking/kbjoblist.h
+  /usr/include/kbanking/kbjobview.h
+  /usr/include/kbanking/kbjobview.ui.h
+  /usr/include/kbanking/kbplugindescrlist.h
+  /usr/include/kbanking/settings.h
+  /usr/lib/libkbanking.dll.a
+  /usr/lib/libkbanking.la
+  /usr/share/aclocal/kbanking.m4
+
+(libqbanking-devel)
+  /usr/bin/qbanking-config
+  /usr/include/qbanking/banking.h
+  /usr/include/qbanking/qbaccountlist.h
+  /usr/include/qbanking/qbanking.h
+  /usr/include/qbanking/qbbankselector.h
+  /usr/include/qbanking/qbbankselector.ui.h
+  /usr/include/qbanking/qbcfgmodule.h
+  /usr/include/qbanking/qbcfgtab.h
+  /usr/include/qbanking/qbcfgtab.ui.h
+  /usr/include/qbanking/qbcfgtabpage.h
+  /usr/include/qbanking/qbcfgtabpageaccount.h
+  /usr/include/qbanking/qbcfgtabpageaccountgen.h
+  /usr/include/qbanking/qbcfgtabpageaccountgen.ui.h
+  /usr/include/qbanking/qbcfgtabpageaccounts.h
+  /usr/include/qbanking/qbcfgtabpageaccounts.ui.h
+  /usr/include/qbanking/qbcfgtabpagebackends.h
+  /usr/include/qbanking/qbcfgtabpagebackends.ui.h
+  /usr/include/qbanking/qbcfgtabpageuser.h
+  /usr/include/qbanking/qbcfgtabpageusergen.h
+  /usr/include/qbanking/qbcfgtabpageusergen.ui.h
+  /usr/include/qbanking/qbcfgtabpageusers.h
+  /usr/include/qbanking/qbcfgtabpageusers.ui.h
+  /usr/include/qbanking/qbcfgtabsettings.h
+  /usr/include/qbanking/qbeditaccount.h
+  /usr/include/qbanking/qbedituser.h
+  /usr/include/qbanking/qbflagstaff.h
+  /usr/include/qbanking/qbimporter.h
+  /usr/include/qbanking/qbimporter.ui.h
+  /usr/include/qbanking/qbinputbox.h
+  /usr/include/qbanking/qbjoblist.h
+  /usr/include/qbanking/qbjobview.h
+  /usr/include/qbanking/qbjobview.ui.h
+  /usr/include/qbanking/qbmapaccount.h
+  /usr/include/qbanking/qbmapaccount.ui.h
+  /usr/include/qbanking/qbpickstartdate.h
+  /usr/include/qbanking/qbpickstartdate.ui.h
+  /usr/include/qbanking/qbplugindescrlist.h
+  /usr/include/qbanking/qbprintdialog.h
+  /usr/include/qbanking/qbprintdialog.ui.h
+  /usr/include/qbanking/qbprocesswatcher.h
+  /usr/include/qbanking/qbprocesswatcher.ui.h
+  /usr/include/qbanking/qbprogress.h
+  /usr/include/qbanking/qbprogress.ui.h
+  /usr/include/qbanking/qbselectbackend.h
+  /usr/include/qbanking/qbselectbackend.ui.h
+  /usr/include/qbanking/qbselectbank.h
+  /usr/include/qbanking/qbselectbank.ui.h
+  /usr/include/qbanking/qbselectfromlist.h
+  /usr/include/qbanking/qbselectfromlist.ui.h
+  /usr/include/qbanking/qbsimplebox.h
+  /usr/include/qbanking/qbsimplebox.ui.h
+  /usr/include/qbanking/qbuserlist.h
+  /usr/include/qbanking/qbwaitcallback.h
+  /usr/include/qbanking/qbwcb_fast.h
+  /usr/include/qbanking/qbwcb_progress.h
+  /usr/include/qbanking/qbwcb_simple.h
+  /usr/lib/libqbanking.dll.a
+  /usr/lib/libqbanking.la
+  /usr/share/aclocal/qbanking.m4
+
+(python-aqbanking)
+  /usr/lib/python2.5/site-packages/aqbanking/__init__.py
+  /usr/lib/python2.5/site-packages/aqbanking/__init__.pyc
+  /usr/lib/python2.5/site-packages/aqbanking/__init__.pyo
+  /usr/lib/python2.5/site-packages/aqbanking/_aqtypes.py
+  /usr/lib/python2.5/site-packages/aqbanking/_aqtypes.pyc
+  /usr/lib/python2.5/site-packages/aqbanking/_aqtypes.pyo
+  /usr/lib/python2.5/site-packages/aqbanking/_basetypes.py
+  /usr/lib/python2.5/site-packages/aqbanking/_basetypes.pyc
+  /usr/lib/python2.5/site-packages/aqbanking/_basetypes.pyo
+  /usr/lib/python2.5/site-packages/aqbanking/console.py
+  /usr/lib/python2.5/site-packages/aqbanking/console.pyc
+  /usr/lib/python2.5/site-packages/aqbanking/console.pyo
+  /usr/lib/python2.5/site-packages/aqbanking/enum.py
+  /usr/lib/python2.5/site-packages/aqbanking/enum.pyc
+  /usr/lib/python2.5/site-packages/aqbanking/enum.pyo
+  /usr/lib/python2.5/site-packages/aqbanking/gtkui.py
+  /usr/lib/python2.5/site-packages/aqbanking/gtkui.pyc
+  /usr/lib/python2.5/site-packages/aqbanking/gtkui.pyo
+
+------------------
+
+Port Notes:
+
+----- version 2.3.2-1 -----
+Initial release for Cygwin.
+
+
+Cygwin port maintained by:
+http://cygwinports.dotsrc.org/

@@ -1,0 +1,10 @@
+category: Net Python
+requires: cygwin libaqbanking16 libgwenhywfar38 python
+external-source: aqbanking
+sdesc: "Online banking and financial library (Python bindings)"
+ldesc: "AqBanking is a library for online banking and financial 
+applications. It provides:
+* Interface for HBCI, OFX, and DTAUS banking methods
+* Financial data importer and exporter
+* Credit institution information retrieval
+* Frontend libraries for FOX, GTK+, Qt, and KDE"
