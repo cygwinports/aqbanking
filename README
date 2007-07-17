@@ -42,10 +42,10 @@ Build requirements:
   sed-4.1.5-2
 
 Canonical website:
-  
+  http://www.aquamaniac.de/aqbanking/
 
 Canonical download:
-  
+  http://downloads.sourceforge.net/aqbanking/
 
 -------------------------------------------
 
@@ -484,6 +484,9 @@ Files included in the binary package:
 ------------------
 
 Port Notes:
+
+----- version 2.3.2-1 -----
+Fixed *-config --includes/--libraries for dependencies.
 
 ----- version 2.3.2-1 -----
 Initial release for Cygwin.
