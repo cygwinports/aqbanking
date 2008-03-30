@@ -1,0 +1,81 @@
+inherit python
+
+DESCRIPTION="All-purpose banking library"
+HOMEPAGE="http://www.aquamaniac.de/aqbanking/"
+SRC_URI="
+	mirror://debian/pool/main/liba/lib${PN}/lib${PN}_${PV}+dfsg.orig.tar.gz
+	/usr/share/gettext/config.rpath
+"
+SRC_DIR="lib${P}.orig"
+
+lib="aqbanking aqdtaus aqhbci aqofxconnect fbanking qbanking"
+abi=(20        4       13     4            2        5)
+
+PKG_NAMES="${PN} libaqnone0 python-${PN}"
+PKG_HINTS="setup aqnone python"
+PKG_CONTENTS[0]="usr/bin/*.exe usr/share/doc/ usr/share/locale/"
+PKG_CONTENTS[1]="usr/bin/cygaqnone-0.dll usr/lib/${PN}/plugins/${abi[0]}/providers/aqnone.* usr/lib/libaqnone.*"
+PKG_CONTENTS[2]=${PYTHON_SITELIB#/}
+
+DIFF_EXCLUDES="aqbanking.iss i18nsources qtsources system.h"
+
+abi_n=0
+pkg_n=3
+
+for l in ${lib}
+do
+	PKG_NAMES+=" lib${l}${abi[$abi_n]} lib${l}-devel"
+	PKG_HINTS+=" ${l} ${l}-devel"
+	PKG_CONTENTS[$pkg_n]="usr/bin/cyg${l}-${abi[$abi_n]}.dll "
+	case ${l} in
+		aqbanking)
+			PKG_CONTENTS[$pkg_n]+="usr/lib/${PN}/plugins/${abi[0]}/bankinfo/
+			                       usr/lib/${PN}/plugins/${abi[0]}/imexporters/
+			                       usr/lib/gwenhywfar/
+			                       usr/share/${PN}/bankinfo/
+			                       usr/share/${PN}/imexporters/" ;;
+		aqhbci)
+			PKG_CONTENTS[$pkg_n]+="usr/lib/${PN}/plugins/${abi[0]}/providers/${l}.*
+			                       usr/share/${l}/" ;;
+		aq*)
+			PKG_CONTENTS[$pkg_n]+="usr/lib/${PN}/plugins/${abi[0]}/providers/${l}.*" ;;
+		qbanking)
+			PKG_CONTENTS[$pkg_n]+="usr/lib/${PN}/plugins/${abi[0]}/debugger/
+			                       usr/lib/${PN}/plugins/${abi[0]}/frontends/${l}/
+			                       usr/lib/${PN}/plugins/${abi[0]}/wizards/
+			                       usr/share/${PN}/frontends/${l}/
+			                       usr/share/${PN}/i18n/" ;;
+	esac
+
+	PKG_CONTENTS[$((pkg_n+1))]+=" usr/include/${l}/ usr/lib/lib${l}.*"
+	case ${l} in
+		aqbanking) PKG_CONTENTS[$((pkg_n+1))]+=" usr/lib/pkgconfig/${l}.pc usr/share/aclocal/${l}.m4" ;;
+		fbanking) PKG_CONTENTS[$((pkg_n+1))]+=" usr/lib/pkgconfig/${l}.pc" ;;
+		*) PKG_CONTENTS[$((pkg_n+1))]+=" usr/share/aclocal/${l}.m4" ;;
+	esac
+
+	let abi_n+=1
+	let pkg_n+=2
+done
+
+CYGCONF_ARGS="
+  --disable-chipcard-client
+  --enable-gwenhywfar
+  --enable-libofx
+  --enable-python
+  --enable-qt3 --enable-qt3-thread
+  --with-qt3-includes=/usr/include/qt3 --with-qt3-libs=/usr/lib/qt3/lib
+  --with-qt3-moc=/usr/lib/qt3/bin --with-qt3-uic=/usr/lib/qt3/bin
+  --with-backends=GPL
+  --with-docpath=/usr/share/doc/${P}/html
+"
+
+src_install() {
+	cd ${B}
+	cyginstall
+
+	dodir /usr/share/doc/${P}
+	mv ${D}/usr/share/doc/${PN}{,-${PV}}/aqbanking-tool/
+	mv ${D}/usr/share/doc/{aqhbci,${P}}/aqhbci-tool/
+	rm -fr ${D}/usr/share/doc/${PN}/
+}
