@@ -1,5 +1,5 @@
 category: Net
-requires: cygwin libaqbanking16 libgwenhywfar38 libintl8 libofx3
+requires: libaqbanking16 libgwenhywfar38 libintl8 libofx3
 external-source: aqbanking
 sdesc: "Online banking and financial library (OFX runtime)"
 ldesc: "AqBanking is a library for online banking and financial 

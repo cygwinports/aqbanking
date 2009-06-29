@@ -1,5 +1,5 @@
 category: Net Python
-requires: cygwin libaqbanking16 libgwenhywfar38 python
+requires: libaqbanking16 libgwenhywfar38 python
 external-source: aqbanking
 sdesc: "Online banking and financial library (Python bindings)"
 ldesc: "AqBanking is a library for online banking and financial 

@@ -1,5 +1,5 @@
 category: Net
-requires: cygwin libaqbanking-devel libgwenhywfar-devel libofx-devel gettext
+requires: libaqbanking-devel libgwenhywfar-devel libofx-devel gettext
 external-source: aqbanking
 sdesc: "Online banking and financial library (OFX development)"
 ldesc: "AqBanking is a library for online banking and financial 

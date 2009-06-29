@@ -1,5 +1,5 @@
 category: Net
-requires: cygwin libaqbanking16 libaqhbci10 libaqnone0 libaqofxconnect3 libcbanking16 libgwenhywfar38 libintl8
+requires: libaqbanking16 libaqhbci10 libaqnone0 libaqofxconnect3 libcbanking16 libgwenhywfar38 libintl8
 sdesc: "Online banking and financial library (apps)"
 ldesc: "AqBanking is a library for online banking and financial 
 applications. It provides:

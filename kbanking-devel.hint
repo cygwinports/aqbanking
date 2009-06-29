@@ -1,5 +1,5 @@
 category: Net KDE
-requires: cygwin libaqbanking-devel libgwenhywfar-devel libqbanking-devel kdelibs-devel
+requires: libaqbanking-devel libgwenhywfar-devel libqbanking-devel kdelibs-devel
 external-source: aqbanking
 sdesc: "Online banking and financial library (KDE frontend development)"
 ldesc: "AqBanking is a library for online banking and financial 

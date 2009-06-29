@@ -1,5 +1,5 @@
 category: Net Gnome
-requires: cygwin libaqbanking16 libgwenhywfar38 libintl8 glib2 gtk2-x11 libglade2
+requires: libaqbanking16 libgwenhywfar38 libintl8 glib2 gtk2-x11 libglade2
 external-source: aqbanking
 sdesc: "Online banking and financial library (GTK+ frontend runtime)"
 ldesc: "AqBanking is a library for online banking and financial 

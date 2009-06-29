@@ -1,5 +1,5 @@
 category: Net X11
-requires: cygwin libaqbanking-devel libgwenhywfar-devel gettext fox16-devel
+requires: libaqbanking-devel libgwenhywfar-devel gettext fox16-devel
 external-source: aqbanking
 sdesc: "Online banking and financial library (FOX frontend development)"
 ldesc: "AqBanking is a library for online banking and financial 

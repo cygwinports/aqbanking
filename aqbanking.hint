@@ -1,5 +1,5 @@
 category: Net
-requires: cygwin libgwenhywfar38 libiconv2 libintl8 libktoblzcheck1
+requires: libgwenhywfar38 libiconv2 libintl8 libktoblzcheck1
 external-source: aqbanking
 sdesc: "Online banking and financial library (core runtime)"
 ldesc: "AqBanking is a library for online banking and financial 

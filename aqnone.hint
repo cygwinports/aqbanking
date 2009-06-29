@@ -1,5 +1,5 @@
 category: Net
-requires: cygwin libaqbanking16
+requires: libaqbanking16
 external-source: aqbanking
 sdesc: "Online banking and financial library (Null provider)"
 ldesc: "AqBanking is a library for online banking and financial 

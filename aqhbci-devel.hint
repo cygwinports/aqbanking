@@ -1,5 +1,5 @@
 category: Net
-requires: cygwin libaqbanking-devel libgwenhywfar-devel gettext
+requires: libaqbanking-devel libgwenhywfar-devel gettext
 external-source: aqbanking
 sdesc: "Online banking and financial library (HBCI development)"
 ldesc: "AqBanking is a library for online banking and financial 
