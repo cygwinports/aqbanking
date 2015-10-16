@@ -1,0 +1,102 @@
+inherit python
+
+NAME="aqbanking"
+VERSION=3.3.0
+RELEASE=1
+CATEGORY="Libs"
+SUMMARY="Online banking and financial library"
+DESCRIPTION="AqBanking is a library for online banking and financial
+applications. It provides:
+* Interface for HBCI, OFX, and DTAUS banking methods
+* Financial data importer and exporter
+* Credit institution information retrieval"
+HOMEPAGE="http://www.aquamaniac.de/aqbanking/"
+SRC_URI="
+	mirror://debian/pool/main/liba/lib${NAME}/lib${NAME}_${VERSION}+dfsg.orig.tar.gz
+	/usr/share/gettext/config.rpath
+"
+SRC_DIR="lib${NAME}-${VERSION}.orig"
+
+PKG_NAMES="${NAME} libaqnone0 libaqbanking20 libaqbanking-devel
+	libaqdtaus4 libaqdtaus-devel libaqhbci13 libaqhbci-devel
+	libaqofxconnect4 libaqofxconnect-devel
+	libfbanking2 libfbanking-devel libqbanking5 libqbanking-devel
+	python-${NAME}"
+aqbanking_CONTENTS="usr/bin/*.exe usr/share/doc/ usr/share/locale/"
+libaqnone0_CONTENTS="usr/bin/cygaqnone-0.dll usr/lib/${NAME}/plugins/20/providers/aqnone.* usr/lib/libaqnone.*"
+libaqbanking20_CONTENTS="
+	usr/bin/cygaqbanking-20.dll
+	usr/lib/${NAME}/plugins/20/bankinfo/
+	usr/lib/${NAME}/plugins/20/imexporters/
+	usr/lib/gwenhywfar/
+	usr/share/${NAME}/bankinfo/
+	usr/share/${NAME}/imexporters/
+"
+libaqbanking_devel_CONTENTS="
+	usr/include/aqbanking/
+	usr/lib/libaqbanking.*
+	usr/lib/pkgconfig/aqbanking.pc
+	usr/share/aclocal/aqbanking.m4
+"
+libaqdtaus4_CONTENTS="
+	usr/bin/cygaqdtaus-4.dll
+	usr/lib/${NAME}/plugins/20/providers/aqdtaus.*
+"
+libaqdtaus_devel_CONTENTS="
+	usr/include/aqdtaus/
+	usr/lib/libaqdtaus.*
+	usr/share/aclocal/aqdtaus.m4
+"
+libaqhbci13_CONTENTS="
+	usr/bin/cygaqhbci-13.dll
+	usr/lib/${NAME}/plugins/20/providers/aqhbci.*
+	usr/share/aqhbci/
+"
+libaqhbci_devel_CONTENTS="
+	usr/include/aqhbci/
+	usr/lib/libaqhbci.*
+	usr/share/aclocal/aqhbci.m4
+"
+libaqofxconnect4_CONTENTS="
+	usr/bin/cygaqofxconnect-4.dll
+	usr/lib/${NAME}/plugins/20/providers/aqofxconnect.*
+"
+libaqofxconnect_devel_CONTENTS="
+	usr/include/aqofxconnect/
+	usr/lib/libaqofxconnect.*
+	usr/share/aclocal/aqofxconnect.m4
+"
+libfbanking2_CONTENTS="usr/bin/cygfbanking-2.dll"
+libfbanking_devel_CONTENTS="
+	usr/include/fbanking/
+	usr/lib/libfbanking.*
+	usr/lib/pkgconfig/fbanking.pc
+"
+libqbanking5_CONTENTS="
+	usr/bin/cygqbanking-5.dll
+	usr/lib/${NAME}/plugins/20/debugger/
+	usr/lib/${NAME}/plugins/20/frontends/${l}/
+	usr/lib/${NAME}/plugins/20/wizards/
+	usr/share/${NAME}/frontends/qbanking/
+	usr/share/${NAME}/i18n/
+"
+libqbanking_devel_CONTENTS="
+	usr/include/qbanking/
+	usr/lib/libqbanking.*
+	usr/share/aclocal/qbanking.m4
+"
+python_aqbanking_CONTENTS=${PYTHON_SITELIB#/}
+
+DIFF_EXCLUDES="aqbanking.iss i18nsources qtsources system.h"
+
+CYGCONF_ARGS="
+  --disable-chipcard-client
+  --enable-gwenhywfar
+  --enable-libofx
+  --enable-python
+  --enable-qt3 --enable-qt3-thread
+  --with-qt3-includes=/usr/include/qt3 --with-qt3-libs=/usr/lib/qt3/lib
+  --with-qt3-moc=/usr/lib/qt3/bin --with-qt3-uic=/usr/lib/qt3/bin
+  --with-backends=GPL
+  --with-docpath=/usr/share/doc/${NAME}/html
+"
