@@ -1,0 +1,11 @@
+--- origsrc/aqbanking-5.5.1/src/plugins/backends/aqhbci/plugin/Makefile.am	2014-08-20 14:45:01.000000000 -0500
++++ src/aqbanking-5.5.1/src/plugins/backends/aqhbci/plugin/Makefile.am	2015-10-16 14:01:45.457282300 -0500
+@@ -74,7 +74,7 @@ aqhbci_la_LDFLAGS = -no-undefined -modul
+ 
+ testlib_SOURCES=testlib.c
+ testlib_LDADD = \
+-  $(aqhbci_internal_libs) \
++  libaqhbci.la \
+   $(aqbanking_internal_libs) \
+   $(gwenhywfar_libs)
+ 

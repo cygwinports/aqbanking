@@ -1,0 +1,11 @@
+--- origsrc/aqbanking-5.5.1/aqbanking.pc.in	2014-07-23 15:29:51.000000000 -0500
++++ src/aqbanking-5.5.1/aqbanking.pc.in	2015-10-16 13:04:25.257432400 -0500
+@@ -37,6 +37,7 @@ Name: AqBanking
+ Description: A library for online banking functions and financial data import/export
+ 
+ Version: @VERSION@
++Requires: gwenhywfar
+ Libs: @aqbanking_ldflags@ @aqbanking_libs@
+-Cflags: @aqbanking_includes@ @gwenhywfar_includes@
++Cflags: @aqbanking_includes@
+ 
