@@ -1,5 +1,5 @@
 NAME="aqbanking"
-VERSION=5.5.1
+VERSION=5.6.10
 RELEASE=1
 CATEGORY="Libs"
 SUMMARY="Online banking and financial library"
@@ -9,7 +9,7 @@ applications. It provides:
 * Financial data importer and exporter
 * Credit institution information retrieval"
 HOMEPAGE="http://www.aquamaniac.de/aqbanking/"
-md5sum=6069af5cafb97d1f4d3a8a08ba58b876
+md5sum=5e2f0d4743bfd636d04093c19858bf5c
 SRC_URI="http://pkgs.fedoraproject.org/repo/pkgs/${NAME}/${NAME}-${VERSION}.tar.gz/${md5sum}/${NAME}-${VERSION}.tar.gz"
 PATCH_URI="
 	http://pkgs.fedoraproject.org/cgit/aqbanking.git/plain/aqbanking-5.0.2-pkgconfig.patch
@@ -18,14 +18,14 @@ PATCH_URI="
 	5.5.1-pkgconfig.patch
 "
 
-PKG_NAMES="${NAME} libaqbanking34 libaqbanking-common libaqbanking-devel
+PKG_NAMES="${NAME} libaqbanking35 libaqbanking-common libaqbanking-devel
 	libaqbankingpp0 libaqebics0 libaqhbci22 libaqofxconnect7"
 aqbanking_CONTENTS="usr/bin/*.exe usr/share/doc/ usr/share/locale/"
-libaqbanking34_REQUIRES="libaqbanking-common"
-libaqbanking34_CONTENTS="
-	usr/bin/cygaqbanking-34.dll
-	usr/bin/cygaqnone-34.dll
-	usr/lib/${NAME}/plugins/34/
+libaqbanking35_REQUIRES="libaqbanking-common"
+libaqbanking35_CONTENTS="
+	usr/bin/cygaqbanking-35.dll
+	usr/bin/cygaqnone-35.dll
+	usr/lib/${NAME}/plugins/35/
 "
 libaqbanking_common_CONTENTS="
 	usr/share/${NAME}/backends/
