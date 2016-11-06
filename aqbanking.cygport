@@ -1,5 +1,5 @@
 NAME="aqbanking"
-VERSION=5.6.10
+VERSION=5.6.12
 RELEASE=1
 CATEGORY="Libs"
 SUMMARY="Online banking and financial library"
@@ -9,8 +9,8 @@ applications. It provides:
 * Financial data importer and exporter
 * Credit institution information retrieval"
 HOMEPAGE="http://www.aquamaniac.de/aqbanking/"
-md5sum=5e2f0d4743bfd636d04093c19858bf5c
-SRC_URI="http://pkgs.fedoraproject.org/repo/pkgs/${NAME}/${NAME}-${VERSION}.tar.gz/${md5sum}/${NAME}-${VERSION}.tar.gz"
+md5sum=f4476db215fe08c73d35b2018cf24739
+SRC_URI="http://pkgs.fedoraproject.org/repo/pkgs/aqbanking/aqbanking-${VERSION}.tar.gz/${md5sum}/aqbanking-${VERSION}.tar.gz"
 PATCH_URI="
 	http://pkgs.fedoraproject.org/cgit/aqbanking.git/plain/aqbanking-5.0.2-pkgconfig.patch
 	5.5.1-os-cygwin.patch
@@ -19,7 +19,7 @@ PATCH_URI="
 "
 
 PKG_NAMES="${NAME} libaqbanking35 libaqbanking-common libaqbanking-devel
-	libaqbankingpp0 libaqebics0 libaqhbci22 libaqofxconnect7"
+	libaqbankingpp0 libaqebics0 libaqhbci23 libaqofxconnect7"
 aqbanking_CONTENTS="usr/bin/*.exe usr/share/doc/ usr/share/locale/"
 libaqbanking35_REQUIRES="libaqbanking-common"
 libaqbanking35_CONTENTS="
@@ -49,8 +49,8 @@ libaqbankingpp0_CONTENTS="usr/bin/cygaqbankingpp-0.dll"
 libaqebics0_SUMMARY="${SUMMARY} (EBICS backend)"
 libaqebics0_REQUIRES="libxmlsec1-gnutls1"
 libaqebics0_CONTENTS="usr/bin/cygaqebics-0.dll"
-libaqhbci22_SUMMARY="${SUMMARY} (HBCI backend)"
-libaqhbci22_CONTENTS="usr/bin/cygaqhbci-22.dll"
+libaqhbci23_SUMMARY="${SUMMARY} (HBCI backend)"
+libaqhbci23_CONTENTS="usr/bin/cygaqhbci-23.dll"
 libaqofxconnect7_SUMMARY="${SUMMARY} (OFX backend)"
 libaqofxconnect7_CONTENTS="usr/bin/cygaqofxconnect-7.dll"
 
