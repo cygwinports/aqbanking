@@ -1,5 +1,5 @@
 NAME="aqbanking"
-VERSION=5.6.12
+VERSION=5.7.8
 RELEASE=1
 CATEGORY="Libs"
 SUMMARY="Online banking and financial library"
@@ -9,17 +9,17 @@ applications. It provides:
 * Financial data importer and exporter
 * Credit institution information retrieval"
 HOMEPAGE="http://www.aquamaniac.de/aqbanking/"
-md5sum=f4476db215fe08c73d35b2018cf24739
-SRC_URI="http://pkgs.fedoraproject.org/repo/pkgs/aqbanking/aqbanking-${VERSION}.tar.gz/${md5sum}/aqbanking-${VERSION}.tar.gz"
+sha512sum=4078c3bc2c0b6f38f853fed064e37b6188c0b8158416ca6482756232ef8fe71e9cc1df0abe8c6bcbe8a7e818c24210f553c367f540d60cb7b7cf0161a9ca7117
+SRC_URI="https://src.fedoraproject.org/repo/pkgs/aqbanking/aqbanking-${VERSION}.tar.gz/sha512/${sha512sum}/aqbanking-${VERSION}.tar.gz"
 PATCH_URI="
-	http://pkgs.fedoraproject.org/cgit/aqbanking.git/plain/aqbanking-5.0.2-pkgconfig.patch
+	https://src.fedoraproject.org/cgit/rpms/aqbanking.git/plain/aqbanking-5.0.2-pkgconfig.patch
 	5.5.1-os-cygwin.patch
 	5.5.1-parallel-make.patch
 	5.5.1-pkgconfig.patch
 "
 
 PKG_NAMES="${NAME} libaqbanking35 libaqbanking-common libaqbanking-devel
-	libaqbankingpp0 libaqebics0 libaqhbci23 libaqofxconnect7"
+	libaqbankingpp0 libaqebics0 libaqhbci24 libaqofxconnect7 libaqpaypal0"
 aqbanking_CONTENTS="usr/bin/*.exe usr/share/doc/ usr/share/locale/"
 libaqbanking35_REQUIRES="libaqbanking-common"
 libaqbanking35_CONTENTS="
@@ -37,6 +37,7 @@ libaqbanking_devel_CONTENTS="
 	usr/bin/aqbanking-config
 	usr/include/aqbanking5/
 	usr/include/aqebics/
+	usr/include/aqpaypal/
 	usr/lib/cmake/aqbanking-*/
 	usr/lib/libaq*
 	usr/lib/pkgconfig/aqbanking.pc
@@ -49,10 +50,12 @@ libaqbankingpp0_CONTENTS="usr/bin/cygaqbankingpp-0.dll"
 libaqebics0_SUMMARY="${SUMMARY} (EBICS backend)"
 libaqebics0_REQUIRES="libxmlsec1-gnutls1"
 libaqebics0_CONTENTS="usr/bin/cygaqebics-0.dll"
-libaqhbci23_SUMMARY="${SUMMARY} (HBCI backend)"
-libaqhbci23_CONTENTS="usr/bin/cygaqhbci-23.dll"
+libaqhbci24_SUMMARY="${SUMMARY} (HBCI backend)"
+libaqhbci24_CONTENTS="usr/bin/cygaqhbci-24.dll"
 libaqofxconnect7_SUMMARY="${SUMMARY} (OFX backend)"
 libaqofxconnect7_CONTENTS="usr/bin/cygaqofxconnect-7.dll"
+libaqpaypal0_SUMMARY="${SUMMARY} (Paypal backend)"
+libaqpaypal0_CONTENTS="usr/bin/cygaqpaypal-0.dll"
 
 DIFF_EXCLUDES="aqbanking.iss mksymlinks.sh system.h"
 
